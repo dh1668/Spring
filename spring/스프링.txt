@@ -1,0 +1,138 @@
+Persistence 패키지 (지속적인)
+db
+data memory
+
+JPA
+JAVA Persistence
+
+jdbc/test에서
+
+static {
+		try {
+			//Class.forName("oracle.jdbc.driver.OracleDriver");
+			Class.forName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+에서 
+24번줄     1521:orcl", "scott", "scott"    으로 수정
+
+
+
+		Server
+		java
+		-class		      ( ORMapper )
+client   	>>	-student		>>      SQL      >>  Mybatis
+		-학생
+		-학과
+		-지도
+
+
+
+JDBC(Java Database Connectivity)는 자바에서 데이터베이스에 접속할 수 있도록 하는 자바 API이다.
+
+JDBC는 데이터베이스에서 자료를 쿼리하거나 업데이트 하는 방법을 제공한다.
+
+자바는 JDBC를 통해 mysql, oracle에 접근한다.
+
+jdbc는 1개 클래스에 반복된 코드가 존재, 한 파일에 java언어와 sql언어가 있어 재사용성 등 안좋은 단점이 있다.
+
+
+
+마이바티스는 JDBC의 작업을 간편하게 해주는 프레임워크이다.
+
+SQL문을 자바 코드에서 분리하여 xml 파일로 따로 관리한다.
+
+spring에서 jdbc를 사용할 수 있지만 , mybatis 를 사용 하는것이 보통이다.
+
+jdbc에서 사용해야 하는 Connection, Statement등을 mybatis가 직접 관리해서 코드를 줄여준다.
+
+jdbc의 PrepareStatment와 같은 sql injection을 고려하지 않아도 된다.
+
+
+
+
+Mapper 인터페이스란
+관계형 데이터베이스(RDBMS)를 자바의 객체 지향 모델로 매핑하게 도와주는 인터페이스다. 
+해당 프레임워크는 RDBMS에 접근할 때 필요한 자바코드를 현저하게 줄일 수 있도록 해준다.
+
+
+Bean 이란 ?
+Spring IoC 컨테이너가 관리하는 자바 객체를 빈(Bean)이라는 용어로 부른다.
+우리가 new 연산자로 어떤 객체를 생성했을 때 그 객체는 빈이 아니다.
+ApplicationContext.getBean()으로 얻어질 수 있는 객체는 빈이다.
+즉 Spring에서의 빈은 ApplicationContext가 알고있는 객체, 
+즉 ApplicationContext가 만들어서 그 안에 담고있는 객체를 의미한다.
+
+
+컴포넌트(Component)란 
+프로그래밍에 있어 재사용이 가능한 각각의 독립된 모듈
+-------------------------------------------------------------------------------------------
+★★★
+<import 하고 tomcat설정>
+file > import > Existing Maven Projects > Next > Browser 눌러서 폴더 가져오기 
+왼쪽밑 tomcat 누르고 Modules 누르기>  path목록누르기 > edit누르고 > /만 남고 다 지우기
+ctrl + s 누르고 끝 
+
+
+-----------------------------------------------------------------------------------------------
+스프링 웹 프로젝트
+
+MVC(Model-View-Controller)
+• 대부분의 서블릿 기반 프레임워크들이 사용하는 방식
+• 데이터와 처리, 화면을 분리하는 방식
+• 웹에서는 Model 2 방식으로 표현
+
+Servlet 라이브러리 필요
+
+
+
+
+• @Controller – 해당 클래스의 인스턴스를 스프링의 빈으로 등
+록하고 컨트롤러로 사용
+• <component-scan>과 같이 활용
+
+
+
+• @RequestMapping – 특정한 URI에 대한 처리를 해당 컨트롤러
+나 메서드에서 처리
+
+
+
+구글크롬에서  주소창에 localhost:8081/sample/ 쳐보기
+
+
+
+----------------------------------------------------------------------------------------------------
+게시판 프로젝트
+
+
+• 일반적인 웹 프로젝트의 구조는 3-Tier의 구조를 활용
+
+• 스프링 MVC를 이용하는 예제의 구성
+
+
+------------------------------------------------------------
+1. 빨간에러 있을때 
+빨간색 폴더 오른쪽 클릭후 build path > 맨밑 con 어쩌고 path
+
+2. 빨간색 폴더 누르고 remove 하고 add external 해서 job어쩌고 파일넣기 그리고적용
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
